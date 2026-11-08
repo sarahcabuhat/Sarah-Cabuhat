@@ -58,8 +58,8 @@
   </div>
 
   <!-- FIXED NAVIGATION HEADER -->
-  <header class="fixed top-0 inset-x-0 z-50 backdrop-blur-xl bg-[var(--bg-deep)]/90 border-b border-[var(--border-subtle)]">
-    <nav class="mx-auto max-w-6xl px-4 sm:px-6 py-3 sm:py-3.5 flex items-center justify-between gap-3">
+  <header class="fixed top-0 inset-x-0 z-50 backdrop-blur-xl bg-[var(--bg-deep)]/85 border-b border-[var(--border-subtle)]">
+    <nav class="mx-auto max-w-6xl px-5 sm:px-6 py-3.5 sm:py-4 flex items-center justify-between gap-4">
       
       <!-- Brand Logo -->
       <a href="#top" class="font-display text-xl sm:text-2xl font-bold tracking-tight flex items-center gap-2.5 group">
@@ -67,7 +67,7 @@
         <span class="text-heading group-hover:text-lilac transition-colors">Sarah</span>
       </a>
 
-      <!-- Desktop Nav Links (Visible on desktop like Screenshot 3) -->
+      <!-- Desktop Nav Links -->
       <div class="hidden md:flex items-center gap-7 lg:gap-8 text-sm text-muted font-medium">
         <a href="#work" class="nav-link hover:text-heading transition-colors">Work</a>
         <a href="#skills" class="nav-link hover:text-heading transition-colors">Skills</a>
@@ -76,9 +76,9 @@
         <a href="#contact" class="nav-link hover:text-heading transition-colors">Contact</a>
       </div>
 
-      <!-- Action Bar: Theme Switcher & Get in Touch (Visible on BOTH mobile and desktop) -->
-      <div class="flex items-center gap-2 sm:gap-3">
-        <!-- Theme Toggle -->
+      <!-- Action Bar: Theme Switcher & Contact Button -->
+      <div class="flex items-center gap-2.5 sm:gap-3">
+        <!-- Theme Toggle (Dark Luxe / Light Silk) -->
         <button id="theme-toggle" class="p-2 sm:p-2.5 rounded-full border border-[var(--border-subtle)] bg-[var(--bg-card)] text-heading hover:border-[var(--lilac-primary)] transition-all cursor-pointer shadow-sm" title="Toggle Light / Dark Mode" aria-label="Toggle Theme">
           <span id="theme-icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -88,140 +88,159 @@
           </span>
         </button>
 
-        <!-- Get In Touch Button (Visible on mobile too!) -->
-        <a href="#contact" class="inline-flex items-center gap-1.5 rounded-full btn-dusty-lilac font-semibold px-3.5 py-1.5 sm:px-5 sm:py-2 text-xs sm:text-sm shadow-md">
+        <!-- CTA Button with Purple Blend -->
+        <a href="#contact" class="hidden sm:inline-flex items-center gap-2 rounded-full btn-dusty-lilac font-semibold px-5 py-2 text-sm shadow-md">
           Get in touch
-          <span aria-hidden="true">→</span>
+          <span aria-hidden="true" class="transition-transform group-hover:translate-x-1">→</span>
         </a>
+
+        <!-- Mobile Menu Hamburger -->
+        <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg border border-[var(--border-subtle)] text-heading" aria-label="Open Menu">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
       </div>
     </nav>
 
-    <!-- Mobile Navigation Sub-Bar (Work · Skills · Certificates · About · Contact) Visible on Mobile! -->
-    <div class="flex md:hidden items-center justify-around px-3 py-2 border-t border-[var(--border-subtle)] bg-[var(--bg-card)]/40 backdrop-blur-md text-xs font-medium">
-      <a href="#work" class="px-2 py-1 text-muted hover:text-heading transition-colors">Work</a>
-      <a href="#skills" class="px-2 py-1 text-muted hover:text-heading transition-colors">Skills</a>
-      <a href="#certificates" class="px-2 py-1 text-muted hover:text-heading transition-colors">Certificates</a>
-      <a href="#about" class="px-2 py-1 text-muted hover:text-heading transition-colors">About</a>
-      <a href="#contact" class="px-2 py-1 text-muted hover:text-heading transition-colors">Contact</a>
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden md:hidden border-b border-[var(--border-subtle)] bg-[var(--bg-deep)]/95 backdrop-blur-2xl px-5 py-4 space-y-3 shadow-2xl">
+      <a href="#work" class="mobile-nav-link block py-2 text-base text-body hover:text-heading">Work</a>
+      <a href="#skills" class="mobile-nav-link block py-2 text-base text-body hover:text-heading">Skills</a>
+      <a href="#certificates" class="mobile-nav-link block py-2 text-base text-body hover:text-heading">Certificates</a>
+      <a href="#about" class="mobile-nav-link block py-2 text-base text-body hover:text-heading">About</a>
+      <a href="#contact" class="mobile-nav-link block py-2 text-base text-body hover:text-heading">Contact</a>
+      <div class="pt-2">
+        <a href="#contact" class="mobile-nav-link inline-flex w-full justify-center items-center gap-2 rounded-full btn-dusty-lilac font-semibold px-4 py-2 text-sm shadow-md">
+          Get in touch →
+        </a>
+      </div>
     </div>
   </header>
 
-  <!-- HERO SECTION (#top) — Ivy Pancho Inspired: Intro first, then Photo below -->
-  <section id="top" class="relative pt-32 sm:pt-40 md:pt-44 pb-16 sm:pb-24 px-5 sm:px-6">
-    <div class="mx-auto max-w-4xl">
-      
-      <!-- 1. GREETING (Like Screenshot 2) -->
-      <div class="inline-flex items-center gap-2 text-sm sm:text-base font-medium text-body mb-2">
-        <span class="text-base sm:text-lg">👋</span>
-        <span>Hello, I'm</span>
-      </div>
+  <!-- HERO SECTION (#top) -->
+  <section id="top" class="relative pt-32 sm:pt-40 md:pt-48 pb-16 sm:pb-24 px-5 sm:px-6">
+    <div class="mx-auto max-w-6xl">
+      <div class="grid md:grid-cols-12 gap-10 md:gap-14 items-center">
+        
+        <!-- Left Column: Introduction & Pitch -->
+        <div class="md:col-span-7 min-w-0">
+          
+          <!-- Availability Badge -->
+          <div class="inline-flex items-center gap-2.5 text-[11px] sm:text-xs uppercase tracking-[0.25em] text-lilac mb-6 border border-[#8f529b]/35 bg-[var(--bg-card)] rounded-full px-4 py-1.5 shadow-sm">
+            <span class="h-2 w-2 rounded-full bg-[#8f529b] animate-neon-pulse"></span>
+            <span class="font-medium">Available for Web Projects &amp; Internships · 2026</span>
+          </div>
 
-      <!-- 2. BIG BOLD NAME -->
-      <h1 class="font-display text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-heading leading-[1.05]">
-        Sarah Cabuhat
-      </h1>
+          <!-- Editorial Headline -->
+          <h1 class="font-display text-[clamp(2.9rem,11.5vw,5.75rem)] leading-[0.94] tracking-tight">
+            <span class="text-heading">Sarah</span><br/>
+            <span class="italic text-gradient-lilac">Cabuhat.</span>
+          </h1>
 
-      <!-- 3. ROLE SUBTITLE (Like UI/UX IMPLEM | in Screenshot 2) -->
-      <div class="mt-2.5 flex items-center gap-2">
-        <p class="text-sm sm:text-lg font-bold uppercase tracking-wider text-[#8f529b]">
-          FRONT-END WEB DEVELOPER &amp; BSIT
-        </p>
-        <span class="inline-block w-0.5 h-4 sm:h-5 bg-[#8f529b] animate-pulse"></span>
-      </div>
+          <!-- Role Description -->
+          <p class="mt-6 sm:mt-8 max-w-xl text-base sm:text-lg text-body leading-relaxed">
+            <span class="text-heading font-semibold">Front-End Web Developer</span> &amp; <span class="text-heading font-semibold">BSIT student major in Web Technology</span> at <span class="text-lilac font-semibold">Nueva Ecija University of Science and Technology (NEUST)</span>. 
+            Turning creativity into digital reality. Built with passion, designed with purpose, and made to stand out. 💻✨
+          </p>
 
-      <!-- 4. BIO DESCRIPTION -->
-      <p class="mt-4 max-w-2xl text-sm sm:text-base md:text-lg text-body leading-relaxed">
-        BSIT student major in Web Technology at <span class="text-lilac font-semibold">Nueva Ecija University of Science and Technology (NEUST)</span>. Turning creativity into digital reality. Built with passion, designed with purpose, and made to stand out. 💻✨
-      </p>
+          <!-- Primary Action Buttons -->
+          <div class="mt-8 sm:mt-10 space-y-3">
+            <!-- Row 1: Main CTAs -->
+            <div class="flex flex-wrap items-center gap-3">
+              <a href="#work" class="inline-flex items-center gap-2 rounded-full btn-dusty-lilac px-6 py-3 text-sm font-semibold flex-1 sm:flex-none justify-center sm:justify-start shadow-md">
+                View selected work
+                <span aria-hidden="true">↓</span>
+              </a>
+              <a href="assets/docs/Sarah_Cabuhat_Resume.docx" download="Sarah_Cabuhat_Resume.docx" class="inline-flex items-center gap-2 rounded-full border border-[#8f529b]/40 bg-[#8f529b]/15 text-heading px-5 py-3 text-sm font-semibold hover:bg-[#8f529b] hover:text-white transition-all shadow-sm flex-1 sm:flex-none justify-center sm:justify-start">
+                <span>📄</span> Download Resume
+              </a>
+              <a href="#certificates" class="inline-flex items-center gap-2 rounded-full border border-[var(--border-subtle)] bg-[var(--bg-card)] text-heading px-5 py-3 text-sm font-medium hover:border-[var(--lilac-primary)] hover:text-lilac transition-all flex-1 sm:flex-none justify-center sm:justify-start shadow-sm">
+                <span>📜</span> View Certificates
+              </a>
+            </div>
+            <!-- Row 2: Social Links -->
+            <div class="flex flex-wrap items-center gap-2.5">
+              <a href="https://www.facebook.com/sarahcabuhat" target="_blank" rel="noreferrer" class="inline-flex items-center gap-1.5 rounded-full border border-[var(--border-subtle)] bg-[var(--bg-card)] text-body px-4 py-2 text-xs sm:text-sm font-medium hover:border-[var(--lilac-primary)] hover:text-heading transition-all" title="Facebook Profile">
+                <span>📘</span> Facebook <span aria-hidden="true" class="text-[10px]">↗</span>
+              </a>
+              <a href="https://www.instagram.com/_srhcbht/" target="_blank" rel="noreferrer" class="inline-flex items-center gap-1.5 rounded-full border border-[var(--border-subtle)] bg-[var(--bg-card)] text-body px-4 py-2 text-xs sm:text-sm font-medium hover:border-[var(--lilac-primary)] hover:text-heading transition-all" title="Instagram Profile">
+                <span>📸</span> Instagram <span aria-hidden="true" class="text-[10px]">↗</span>
+              </a>
+              <a href="https://www.tiktok.com/@_itzsaraqrl" target="_blank" rel="noreferrer" class="inline-flex items-center gap-1.5 rounded-full border border-[var(--border-subtle)] bg-[var(--bg-card)] text-body px-4 py-2 text-xs sm:text-sm font-medium hover:border-[var(--lilac-primary)] hover:text-heading transition-all" title="TikTok Profile">
+                <span>🎵</span> TikTok <span aria-hidden="true" class="text-[10px]">↗</span>
+              </a>
+            </div>
+          </div>
 
-      <!-- 5. TWO PRIMARY BUTTONS SIDE-BY-SIDE (VIEW MY WORK -> & DOWNLOAD RESUME v) -->
-      <div class="mt-6 sm:mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
-        <a href="#work" class="inline-flex items-center justify-center gap-2 rounded-full btn-dusty-lilac px-6 py-3 text-sm font-semibold shadow-lg">
-          VIEW MY WORK →
-        </a>
-        <a href="assets/docs/Sarah_Cabuhat_Resume.docx" download="Sarah_Cabuhat_Resume.docx" class="inline-flex items-center justify-center gap-2 rounded-full border border-[var(--border-subtle)] bg-[var(--bg-card)] text-heading hover:border-[var(--lilac-primary)] px-6 py-3 text-sm font-medium transition-all shadow-sm">
-          DOWNLOAD RESUME ↓
-        </a>
-      </div>
-
-      <!-- 6. FIND ME ON SOCIAL ICONS (Like Screenshot 2) -->
-      <div class="mt-6 flex flex-wrap items-center gap-3 text-xs text-muted font-medium">
-        <span class="uppercase tracking-wider font-semibold text-[11px] text-body">FIND ME ON</span>
-        <div class="flex items-center gap-2">
-          <!-- Facebook -->
-          <a href="https://www.facebook.com/sarahcabuhat" target="_blank" rel="noreferrer" class="h-9 w-9 rounded-full border border-[var(--border-subtle)] bg-[var(--bg-card)] hover:border-[var(--lilac-primary)] hover:text-heading flex items-center justify-center text-sm transition-all shadow-sm" title="Facebook">
-            📘
-          </a>
-          <!-- Instagram -->
-          <a href="https://www.instagram.com/_srhcbht/" target="_blank" rel="noreferrer" class="h-9 w-9 rounded-full border border-[var(--border-subtle)] bg-[var(--bg-card)] hover:border-[var(--lilac-primary)] hover:text-heading flex items-center justify-center text-sm transition-all shadow-sm" title="Instagram">
-            📸
-          </a>
-          <!-- TikTok -->
-          <a href="https://www.tiktok.com/@_itzsaraqrl" target="_blank" rel="noreferrer" class="h-9 w-9 rounded-full border border-[var(--border-subtle)] bg-[var(--bg-card)] hover:border-[var(--lilac-primary)] hover:text-heading flex items-center justify-center text-sm transition-all shadow-sm" title="TikTok">
-            🎵
-          </a>
-          <!-- Copy Email -->
-          <button data-copy="sarahcabuhat018@gmail.com" class="h-9 w-9 rounded-full border border-[var(--border-subtle)] bg-[var(--bg-card)] hover:border-[var(--lilac-primary)] hover:text-heading flex items-center justify-center text-sm transition-all shadow-sm cursor-pointer" title="Copy Email">
-            ✉️
-          </button>
+          <!-- Location Badge -->
+          <div class="mt-10 sm:mt-12 flex flex-wrap items-center gap-2.5 sm:gap-3 text-xs text-muted">
+            <span class="inline-flex items-center gap-1.5 rounded-full border border-[var(--border-subtle)] bg-[var(--bg-card)] px-3.5 py-1.5 text-body">
+              <span>📍</span> Bongabon, Nueva Ecija, PH
+            </span>
+          </div>
         </div>
-      </div>
 
-      <!-- 7. SARAH'S PHOTO (BELOW THE INTRO — Exactly like Screenshot 2) -->
-      <div class="mt-10 sm:mt-14 flex justify-center">
-        <div class="relative w-full max-w-[340px] sm:max-w-[420px]">
-          <!-- Atmospheric Glow Behind Card -->
-          <div class="absolute inset-0 -m-6 rounded-[3rem] bg-[#8f529b]/25 blur-3xl -z-10"></div>
+        <!-- Right Column: Sarah's Photo with Shimmer Border Box -->
+        <div class="md:col-span-5 flex justify-center md:justify-end">
+          <div class="relative w-full max-w-[340px] sm:max-w-[380px]">
+            
+            <!-- Atmospheric Glow Behind Card -->
+            <div class="absolute inset-0 -m-5 rounded-[2.5rem] bg-[#8f529b]/25 blur-3xl -z-10"></div>
 
-          <!-- Shimmer Border Box Container -->
-          <div class="shimmer-border-box rounded-[2.5rem] p-4 sm:p-5 bg-[var(--bg-card)] backdrop-blur-2xl shadow-2xl">
-            <!-- Portrait Image Container -->
-            <div class="relative aspect-square rounded-[2rem] overflow-hidden bg-[var(--bg-deep)] border border-[var(--border-subtle)]">
-              <img 
-                src="assets/images/sarah_profile.jpg" 
-                alt="Sarah Cabuhat — Web Developer &amp; BSIT Major in Web Technology" 
-                class="w-full h-full object-cover object-center cursor-zoom-in hover:scale-105 transition-transform duration-700"
-                loading="eager"
-                data-zoomable="true"
-              />
-              <!-- Floating Info Badge -->
-              <div class="absolute top-4 right-4 inline-flex items-center gap-1.5 rounded-full bg-[var(--bg-deep)]/90 backdrop-blur-md border border-[var(--border-subtle)] px-3 py-1 text-[11px] font-semibold text-heading shadow-xl">
+            <!-- Shimmer Border Box Container -->
+            <div class="shimmer-border-box rounded-[2rem] p-3.5 sm:p-4 bg-[var(--bg-card)] backdrop-blur-2xl shadow-2xl">
+              <!-- Portrait Image Container -->
+              <div class="relative aspect-square rounded-[1.6rem] overflow-hidden bg-[var(--bg-deep)] border border-[var(--border-subtle)]">
+                <img 
+                  src="assets/images/sarah_profile.jpg" 
+                  alt="Sarah Cabuhat — Web Developer &amp; BSIT Major in Web Technology" 
+                  class="w-full h-full object-cover object-center cursor-zoom-in hover:scale-105 transition-transform duration-700"
+                  loading="eager"
+                  data-zoomable="true"
+                />
+              </div>
+
+              <!-- Floating Info Badge - Front-End Web Developer -->
+              <div class="absolute top-6 right-6 inline-flex items-center gap-1.5 rounded-full bg-[var(--bg-deep)]/90 backdrop-blur-md border border-[var(--border-subtle)] px-3.5 py-1 text-[11px] font-semibold text-heading shadow-xl animate-float-subtle">
                 <span class="h-2 w-2 rounded-full bg-[#8f529b]"></span>
-                Web Developer
+                Front-End Web Developer
               </div>
             </div>
 
             <!-- Quick Profile Bar Below Photo -->
             <div class="mt-4 glass-panel-luxury p-3.5 rounded-2xl flex items-center justify-between text-xs">
               <div>
-                <p class="font-bold text-heading text-sm">Sarah Cabuhat</p>
-                <p class="text-[11px] text-muted">sarahcabuhat018@gmail.com · Bongabon, NE</p>
+                <p class="font-bold text-heading">Sarah Cabuhat</p>
+                <p class="text-[11px] text-muted">sarahcabuhat018@gmail.com</p>
               </div>
-              <button data-copy="sarahcabuhat018@gmail.com" class="px-3 py-1.5 rounded-lg border border-[var(--border-subtle)] bg-[var(--bg-deep)] hover:border-[var(--lilac-primary)] text-body hover:text-heading text-xs font-medium transition-colors flex items-center gap-1 cursor-pointer" title="Copy Email">
+              <button data-copy="sarahcabuhat018@gmail.com" class="px-2.5 py-1.5 rounded-lg border border-[var(--border-subtle)] bg-[var(--bg-deep)] hover:border-[var(--lilac-primary)] text-body hover:text-heading text-xs font-medium transition-colors flex items-center gap-1.5 cursor-pointer" title="Copy Email">
                 <span>⎘</span> Copy
               </button>
             </div>
+
           </div>
         </div>
+
       </div>
 
       <!-- KEY METRICS BANNER (Impact & Credibility) -->
-      <div class="mt-10 sm:mt-20 grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6">
-        <div class="glass-panel-luxury p-3.5 sm:p-5 rounded-2xl text-center">
-          <p class="font-display text-2xl sm:text-4xl font-bold text-heading">04</p>
-          <p class="text-[10px] sm:text-xs text-muted uppercase tracking-wider mt-1 font-medium">Shipped Web Projects</p>
+      <div class="mt-16 sm:mt-24 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+        <div class="glass-panel-luxury p-5 rounded-2xl text-center">
+          <p class="font-display text-3xl sm:text-4xl font-bold text-heading">04</p>
+          <p class="text-xs text-muted uppercase tracking-wider mt-1 font-medium">Shipped Web Projects</p>
         </div>
-        <div class="glass-panel-luxury p-3.5 sm:p-5 rounded-2xl text-center">
-          <p class="font-display text-2xl sm:text-4xl font-bold text-heading">05</p>
-          <p class="text-[10px] sm:text-xs text-muted uppercase tracking-wider mt-1 font-medium">Industry Certifications</p>
+        <div class="glass-panel-luxury p-5 rounded-2xl text-center">
+          <p class="font-display text-3xl sm:text-4xl font-bold text-heading">05</p>
+          <p class="text-xs text-muted uppercase tracking-wider mt-1 font-medium">Industry Certifications</p>
         </div>
-        <div class="glass-panel-luxury p-3.5 sm:p-5 rounded-2xl text-center">
-          <p class="font-display text-2xl sm:text-4xl font-bold text-heading">12+</p>
-          <p class="text-[10px] sm:text-xs text-muted uppercase tracking-wider mt-1 font-medium">Core Technologies</p>
+        <div class="glass-panel-luxury p-5 rounded-2xl text-center">
+          <p class="font-display text-3xl sm:text-4xl font-bold text-heading">12+</p>
+          <p class="text-xs text-muted uppercase tracking-wider mt-1 font-medium">Core Technologies</p>
         </div>
-        <div class="glass-panel-luxury p-3.5 sm:p-5 rounded-2xl text-center">
+        <div class="glass-panel-luxury p-5 rounded-2xl text-center">
           <p class="font-display text-2xl sm:text-3xl font-bold text-heading">100%</p>
-          <p class="text-[10px] sm:text-xs text-muted uppercase tracking-wider mt-1 font-medium">Front-End Focused</p>
+          <p class="text-xs text-muted uppercase tracking-wider mt-1 font-medium">Front-End Focused</p>
         </div>
       </div>
 
