@@ -104,14 +104,24 @@
     </nav>
 
     <!-- Mobile Dropdown Menu -->
-    <div id="mobile-menu" class="hidden md:hidden border-b border-[var(--border-subtle)] bg-[var(--bg-deep)]/95 backdrop-blur-2xl px-5 py-4 space-y-3">
-      <a href="#work" class="mobile-nav-link block py-2 text-base text-body hover:text-heading">Work</a>
-      <a href="#skills" class="mobile-nav-link block py-2 text-base text-body hover:text-heading">Skills</a>
-      <a href="#certificates" class="mobile-nav-link block py-2 text-base text-body hover:text-heading">Certificates</a>
-      <a href="#about" class="mobile-nav-link block py-2 text-base text-body hover:text-heading">About</a>
-      <a href="#contact" class="mobile-nav-link block py-2 text-base text-body hover:text-heading">Contact</a>
+    <div id="mobile-menu" class="hidden md:hidden border-b border-[var(--border-subtle)] bg-[var(--bg-deep)]/95 backdrop-blur-2xl px-4 py-3 space-y-1 shadow-2xl">
+      <a href="#work" class="mobile-nav-link text-body hover:text-heading flex items-center gap-2.5">
+        <span class="text-xs text-lilac">💼</span> Work
+      </a>
+      <a href="#skills" class="mobile-nav-link text-body hover:text-heading flex items-center gap-2.5">
+        <span class="text-xs text-lilac">⚡</span> Skills
+      </a>
+      <a href="#certificates" class="mobile-nav-link text-body hover:text-heading flex items-center gap-2.5">
+        <span class="text-xs text-lilac">📜</span> Certificates
+      </a>
+      <a href="#about" class="mobile-nav-link text-body hover:text-heading flex items-center gap-2.5">
+        <span class="text-xs text-lilac">🌸</span> About
+      </a>
+      <a href="#contact" class="mobile-nav-link text-body hover:text-heading flex items-center gap-2.5">
+        <span class="text-xs text-lilac">✉️</span> Contact
+      </a>
       <div class="pt-2">
-        <a href="#contact" class="mobile-nav-link inline-flex w-full justify-center items-center gap-2 rounded-full btn-dusty-lilac font-semibold px-4 py-2 text-sm shadow-md">
+        <a href="#contact" class="mobile-nav-link inline-flex w-full justify-center items-center gap-2 rounded-full btn-dusty-lilac font-semibold px-4 py-2.5 text-sm shadow-md">
           Get in touch →
         </a>
       </div>
@@ -119,70 +129,103 @@
   </header>
 
   <!-- HERO SECTION (#top) -->
-  <section id="top" class="relative pt-32 sm:pt-40 md:pt-48 pb-16 sm:pb-24 px-5 sm:px-6">
+  <section id="top" class="relative pt-24 sm:pt-36 md:pt-44 pb-14 sm:pb-24 px-4 sm:px-6">
     <div class="mx-auto max-w-6xl">
-      <div class="grid md:grid-cols-12 gap-10 md:gap-14 items-center">
+      <div class="grid md:grid-cols-12 gap-8 md:gap-14 items-center">
         
         <!-- Left Column: Introduction & Pitch -->
         <div class="md:col-span-7 min-w-0">
           
           <!-- Availability Badge -->
-          <div class="inline-flex items-center gap-2.5 text-[11px] sm:text-xs uppercase tracking-[0.25em] text-lilac mb-6 border border-[#8f529b]/35 bg-[var(--bg-card)] rounded-full px-4 py-1.5 shadow-sm">
+          <div class="inline-flex items-center gap-2 text-[10px] sm:text-xs uppercase tracking-[0.2em] sm:tracking-[0.25em] text-lilac mb-4 sm:mb-6 border border-[#8f529b]/35 bg-[var(--bg-card)] rounded-full px-3.5 sm:px-4 py-1.5 shadow-sm">
             <span class="h-2 w-2 rounded-full bg-[#8f529b] animate-neon-pulse"></span>
-            <span class="font-medium">Available for Web Projects &amp; Internships · 2026</span>
+            <span class="font-medium">Available for Projects &amp; Internships · 2026</span>
           </div>
 
           <!-- Editorial Headline -->
-          <h1 class="font-display text-[clamp(2.9rem,11.5vw,5.75rem)] leading-[0.94] tracking-tight">
+          <h1 class="font-display text-4xl sm:text-5xl md:text-7xl leading-[1.02] tracking-tight">
             <span class="text-heading">Sarah</span><br/>
             <span class="italic text-gradient-lilac">Cabuhat.</span>
           </h1>
 
+          <!-- Mobile-Only Portrait Card (Visible on phone, hidden on desktop) -->
+          <div class="my-5 md:hidden flex justify-center">
+            <div class="relative w-full max-w-[270px]">
+              <div class="absolute inset-0 -m-3 rounded-[2rem] bg-[#8f529b]/25 blur-2xl -z-10"></div>
+              <div class="shimmer-border-box rounded-[1.75rem] p-3 bg-[var(--bg-card)] backdrop-blur-2xl shadow-xl">
+                <div class="relative aspect-square rounded-[1.3rem] overflow-hidden bg-[var(--bg-deep)] border border-[var(--border-subtle)]">
+                  <img 
+                    src="assets/images/sarah_profile.jpg" 
+                    alt="Sarah Cabuhat — Web Developer &amp; BSIT Major in Web Technology" 
+                    class="w-full h-full object-cover object-center cursor-zoom-in"
+                    loading="eager"
+                    data-zoomable="true"
+                  />
+                  <div class="absolute top-3 right-3 inline-flex items-center gap-1.5 rounded-full bg-[var(--bg-deep)]/90 backdrop-blur-md border border-[var(--border-subtle)] px-2.5 py-0.5 text-[10px] font-semibold text-heading shadow-md">
+                    <span class="h-1.5 w-1.5 rounded-full bg-[#8f529b]"></span>
+                    Web Developer
+                  </div>
+                </div>
+                <div class="mt-2.5 px-1 flex items-center justify-between text-xs">
+                  <div>
+                    <p class="font-bold text-heading text-[11px]">Sarah Cabuhat</p>
+                    <p class="text-[10px] text-muted">NEUST · BSIT Web Tech</p>
+                  </div>
+                  <button data-copy="sarahcabuhat018@gmail.com" class="px-2 py-1 rounded-md border border-[var(--border-subtle)] bg-[var(--bg-deep)] text-[10px] font-medium text-body flex items-center gap-1 cursor-pointer">
+                    <span>⎘</span> Copy
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <!-- Role Description -->
-          <p class="mt-6 sm:mt-8 max-w-xl text-base sm:text-lg text-body leading-relaxed">
+          <p class="mt-4 sm:mt-8 max-w-xl text-sm sm:text-lg text-body leading-relaxed">
             <span class="text-heading font-semibold">Front-End Web Developer</span> &amp; <span class="text-heading font-semibold">BSIT student major in Web Technology</span> at <span class="text-lilac font-semibold">Nueva Ecija University of Science and Technology (NEUST)</span>. 
             Turning creativity into digital reality. Built with passion, designed with purpose, and made to stand out. 💻✨
           </p>
 
           <!-- Primary Action Buttons -->
-          <div class="mt-8 sm:mt-10 space-y-3">
+          <div class="mt-6 sm:mt-10 space-y-3">
             <!-- Row 1: Main CTAs -->
-            <div class="flex flex-wrap items-center gap-3">
-              <a href="#work" class="inline-flex items-center gap-2 rounded-full btn-dusty-lilac px-6 py-3 text-sm font-semibold flex-1 sm:flex-none justify-center sm:justify-start">
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-3">
+              <a href="#work" class="inline-flex items-center justify-center gap-2 rounded-full btn-dusty-lilac px-6 py-3 text-sm font-semibold shadow-md">
                 View selected work
                 <span aria-hidden="true">↓</span>
               </a>
-              <a href="assets/docs/Sarah_Cabuhat_Resume.docx" download="Sarah_Cabuhat_Resume.docx" class="inline-flex items-center gap-2 rounded-full border border-[#8f529b]/40 bg-[#8f529b]/15 text-heading px-5 py-3 text-sm font-semibold hover:bg-[#8f529b] hover:text-white transition-all shadow-sm flex-1 sm:flex-none justify-center sm:justify-start">
-                <span>📄</span> Download Resume
-              </a>
-              <a href="#certificates" class="inline-flex items-center gap-2 rounded-full border border-[var(--border-subtle)] bg-[var(--bg-card)] text-heading px-5 py-3 text-sm font-medium hover:border-[var(--lilac-primary)] hover:text-lilac transition-all flex-1 sm:flex-none justify-center sm:justify-start">
-                <span>📜</span> View Certificates
-              </a>
+              <div class="grid grid-cols-2 gap-2 sm:flex sm:gap-3">
+                <a href="assets/docs/Sarah_Cabuhat_Resume.docx" download="Sarah_Cabuhat_Resume.docx" class="inline-flex items-center justify-center gap-1.5 rounded-full border border-[#8f529b]/40 bg-[#8f529b]/15 text-heading px-3 sm:px-5 py-2.5 sm:py-3 text-xs sm:text-sm font-semibold hover:bg-[#8f529b] hover:text-white transition-all shadow-sm">
+                  <span>📄</span> Resume
+                </a>
+                <a href="#certificates" class="inline-flex items-center justify-center gap-1.5 rounded-full border border-[var(--border-subtle)] bg-[var(--bg-card)] text-heading px-3 sm:px-5 py-2.5 sm:py-3 text-xs sm:text-sm font-medium hover:border-[var(--lilac-primary)] hover:text-lilac transition-all shadow-sm">
+                  <span>📜</span> Certificates
+                </a>
+              </div>
             </div>
             <!-- Row 2: Social Links -->
-            <div class="flex flex-wrap items-center gap-2.5">
-              <a href="https://www.facebook.com/sarahcabuhat" target="_blank" rel="noreferrer" class="inline-flex items-center gap-1.5 rounded-full border border-[var(--border-subtle)] bg-[var(--bg-card)] text-body px-4 py-2 text-xs sm:text-sm font-medium hover:border-[var(--lilac-primary)] hover:text-heading transition-all" title="Facebook Profile">
-                <span>📘</span> Facebook <span aria-hidden="true" class="text-[10px]">↗</span>
+            <div class="grid grid-cols-3 sm:flex items-center gap-2 sm:gap-2.5 pt-1">
+              <a href="https://www.facebook.com/sarahcabuhat" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center gap-1 rounded-full border border-[var(--border-subtle)] bg-[var(--bg-card)] text-body px-3 py-2 text-xs font-medium hover:border-[var(--lilac-primary)] hover:text-heading transition-all" title="Facebook Profile">
+                <span>📘</span> FB <span aria-hidden="true" class="text-[9px]">↗</span>
               </a>
-              <a href="https://www.instagram.com/_srhcbht/" target="_blank" rel="noreferrer" class="inline-flex items-center gap-1.5 rounded-full border border-[var(--border-subtle)] bg-[var(--bg-card)] text-body px-4 py-2 text-xs sm:text-sm font-medium hover:border-[var(--lilac-primary)] hover:text-heading transition-all" title="Instagram Profile">
-                <span>📸</span> Instagram <span aria-hidden="true" class="text-[10px]">↗</span>
+              <a href="https://www.instagram.com/_srhcbht/" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center gap-1 rounded-full border border-[var(--border-subtle)] bg-[var(--bg-card)] text-body px-3 py-2 text-xs font-medium hover:border-[var(--lilac-primary)] hover:text-heading transition-all" title="Instagram Profile">
+                <span>📸</span> IG <span aria-hidden="true" class="text-[9px]">↗</span>
               </a>
-              <a href="https://www.tiktok.com/@_itzsaraqrl" target="_blank" rel="noreferrer" class="inline-flex items-center gap-1.5 rounded-full border border-[var(--border-subtle)] bg-[var(--bg-card)] text-body px-4 py-2 text-xs sm:text-sm font-medium hover:border-[var(--lilac-primary)] hover:text-heading transition-all" title="TikTok Profile">
-                <span>🎵</span> TikTok <span aria-hidden="true" class="text-[10px]">↗</span>
+              <a href="https://www.tiktok.com/@_itzsaraqrl" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center gap-1 rounded-full border border-[var(--border-subtle)] bg-[var(--bg-card)] text-body px-3 py-2 text-xs font-medium hover:border-[var(--lilac-primary)] hover:text-heading transition-all" title="TikTok Profile">
+                <span>🎵</span> TikTok <span aria-hidden="true" class="text-[9px]">↗</span>
               </a>
             </div>
           </div>
 
           <!-- Location Badge -->
-          <div class="mt-10 sm:mt-12 flex flex-wrap items-center gap-2.5 sm:gap-3 text-xs text-muted">
-            <span class="inline-flex items-center gap-1.5 rounded-full border border-[var(--border-subtle)] bg-[var(--bg-card)] px-3.5 py-1.5 text-body">
+          <div class="mt-8 sm:mt-12 flex flex-wrap items-center gap-2.5 sm:gap-3 text-xs text-muted">
+            <span class="inline-flex items-center gap-1.5 rounded-full border border-[var(--border-subtle)] bg-[var(--bg-card)] px-3.5 py-1.5 text-body text-xs">
               <span>📍</span> Bongabon, Nueva Ecija, PH
             </span>
           </div>
         </div>
 
-        <!-- Right Column: Sarah's Photo with Shimmer Border Box -->
-        <div class="md:col-span-5 flex justify-center md:justify-end">
+        <!-- Right Column: Sarah's Photo with Shimmer Border Box (Desktop view) -->
+        <div class="hidden md:flex md:col-span-5 justify-center md:justify-end">
           <div class="relative w-full max-w-[340px] sm:max-w-[380px]">
             
             <!-- Atmospheric Glow Behind Card -->
@@ -225,22 +268,22 @@
       </div>
 
       <!-- KEY METRICS BANNER (Impact & Credibility) -->
-      <div class="mt-16 sm:mt-24 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
-        <div class="glass-panel-luxury p-5 rounded-2xl text-center">
-          <p class="font-display text-3xl sm:text-4xl font-bold text-heading">04</p>
-          <p class="text-xs text-muted uppercase tracking-wider mt-1 font-medium">Shipped Web Projects</p>
+      <div class="mt-10 sm:mt-20 grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6">
+        <div class="glass-panel-luxury p-3.5 sm:p-5 rounded-2xl text-center">
+          <p class="font-display text-2xl sm:text-4xl font-bold text-heading">04</p>
+          <p class="text-[10px] sm:text-xs text-muted uppercase tracking-wider mt-1 font-medium">Shipped Web Projects</p>
         </div>
-        <div class="glass-panel-luxury p-5 rounded-2xl text-center">
-          <p class="font-display text-3xl sm:text-4xl font-bold text-heading">05</p>
-          <p class="text-xs text-muted uppercase tracking-wider mt-1 font-medium">Industry Certifications</p>
+        <div class="glass-panel-luxury p-3.5 sm:p-5 rounded-2xl text-center">
+          <p class="font-display text-2xl sm:text-4xl font-bold text-heading">05</p>
+          <p class="text-[10px] sm:text-xs text-muted uppercase tracking-wider mt-1 font-medium">Industry Certifications</p>
         </div>
-        <div class="glass-panel-luxury p-5 rounded-2xl text-center">
-          <p class="font-display text-3xl sm:text-4xl font-bold text-heading">12+</p>
-          <p class="text-xs text-muted uppercase tracking-wider mt-1 font-medium">Core Technologies</p>
+        <div class="glass-panel-luxury p-3.5 sm:p-5 rounded-2xl text-center">
+          <p class="font-display text-2xl sm:text-4xl font-bold text-heading">12+</p>
+          <p class="text-[10px] sm:text-xs text-muted uppercase tracking-wider mt-1 font-medium">Core Technologies</p>
         </div>
-        <div class="glass-panel-luxury p-5 rounded-2xl text-center">
+        <div class="glass-panel-luxury p-3.5 sm:p-5 rounded-2xl text-center">
           <p class="font-display text-2xl sm:text-3xl font-bold text-heading">100%</p>
-          <p class="text-xs text-muted uppercase tracking-wider mt-1 font-medium">Front-End Focused</p>
+          <p class="text-[10px] sm:text-xs text-muted uppercase tracking-wider mt-1 font-medium">Front-End Focused</p>
         </div>
       </div>
 
@@ -268,30 +311,31 @@
         <!-- ===================================================================
              PROJECT 01: TALA BY KYLA JEWELRY CATALOGUE
              =================================================================== -->
-        <li class="project-card group relative grid md:grid-cols-12 gap-6 md:gap-8 p-6 sm:p-8 rounded-3xl border border-[var(--border-subtle)] bg-[var(--bg-card)] backdrop-blur-2xl hover:border-[var(--lilac-primary)] hover:shadow-2xl transition-all duration-300">
+        <li class="project-card group relative grid md:grid-cols-12 gap-5 md:gap-8 p-4 sm:p-6 md:p-8 rounded-2xl sm:rounded-3xl border border-[var(--border-subtle)] bg-[var(--bg-card)] backdrop-blur-2xl hover:border-[var(--lilac-primary)] hover:shadow-2xl transition-all duration-300">
           
-          <!-- Number indicator -->
-          <div class="md:col-span-1 text-sm text-lilac font-mono font-bold">
-            01
+          <!-- Number indicator & mobile category pill -->
+          <div class="md:col-span-1 flex items-center justify-between md:block text-sm text-lilac font-mono font-bold">
+            <span>01</span>
+            <span class="md:hidden text-[10px] font-sans px-2.5 py-0.5 rounded-full border border-[#8f529b]/35 bg-[var(--lilac-primary)]/10 text-lilac uppercase tracking-wider font-semibold">Catalogue</span>
           </div>
 
-          <!-- Project Details (Col span 4) -->
-          <div class="md:col-span-4 min-w-0 flex flex-col justify-between">
+          <!-- Project Details (order-2 on mobile, col-span-4 on desktop) -->
+          <div class="order-2 md:order-1 md:col-span-4 min-w-0 flex flex-col justify-between">
             <div>
-              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#8f529b]/35 bg-[var(--lilac-primary)]/10 text-[11px] font-semibold text-lilac uppercase tracking-widest mb-3">
+              <div class="hidden md:inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#8f529b]/35 bg-[var(--lilac-primary)]/10 text-[11px] font-semibold text-lilac uppercase tracking-widest mb-3">
                 <span>💍</span> Digital Product Catalogue
               </div>
 
-              <h3 class="font-display text-2xl sm:text-3xl tracking-tight text-heading group-hover:text-lilac transition-colors">
+              <h3 class="font-display text-xl sm:text-2xl md:text-3xl tracking-tight text-heading group-hover:text-lilac transition-colors">
                 Tala by Kyla — Online Jewelry Catalogue
               </h3>
               
-              <p class="mt-3 text-sm sm:text-base text-body leading-relaxed">
+              <p class="mt-2.5 sm:mt-3 text-xs sm:text-base text-body leading-relaxed">
                 A digital showcase catalogue created to browse and view Tala by Kyla jewelry collections. It serves as an online product viewer where users can explore different pieces, and clicking on any item automatically redirects them directly to the official Tala by Kyla store page.
               </p>
 
               <!-- Architecture Highlights -->
-              <div class="mt-5 space-y-2 text-xs text-body">
+              <div class="mt-4 sm:mt-5 space-y-1.5 sm:space-y-2 text-xs text-body">
                 <div class="flex items-center gap-2">
                   <span class="text-lilac font-bold">✓</span> Online viewing catalogue for Tala by Kyla jewelry items
                 </div>
@@ -304,34 +348,31 @@
               </div>
 
               <!-- Tech Stack Badges -->
-              <div class="mt-6 flex flex-wrap gap-2">
-                <span class="text-[11px] sm:text-xs px-3 py-1 rounded-full border border-[var(--border-subtle)] bg-[var(--bg-deep)] text-body">HTML5</span>
-                <span class="text-[11px] sm:text-xs px-3 py-1 rounded-full border border-[var(--border-subtle)] bg-[var(--bg-deep)] text-body">CSS3 / Flexbox</span>
-                <span class="text-[11px] sm:text-xs px-3 py-1 rounded-full border border-[var(--border-subtle)] bg-[var(--bg-deep)] text-body">JavaScript</span>
-                <span class="text-[11px] sm:text-xs px-3 py-1 rounded-full border border-[var(--border-subtle)] bg-[var(--bg-deep)] text-body">Responsive Design</span>
+              <div class="mt-4 sm:mt-6 flex flex-wrap gap-1.5 sm:gap-2">
+                <span class="text-[10px] sm:text-xs px-2.5 sm:px-3 py-1 rounded-full border border-[var(--border-subtle)] bg-[var(--bg-deep)] text-body">HTML5</span>
+                <span class="text-[10px] sm:text-xs px-2.5 sm:px-3 py-1 rounded-full border border-[var(--border-subtle)] bg-[var(--bg-deep)] text-body">CSS3</span>
+                <span class="text-[10px] sm:text-xs px-2.5 sm:px-3 py-1 rounded-full border border-[var(--border-subtle)] bg-[var(--bg-deep)] text-body">JavaScript</span>
+                <span class="text-[10px] sm:text-xs px-2.5 sm:px-3 py-1 rounded-full border border-[var(--border-subtle)] bg-[var(--bg-deep)] text-body">Responsive UI</span>
               </div>
             </div>
 
-            <div class="mt-6 pt-4 border-t border-[var(--border-subtle)] flex flex-wrap items-center justify-between gap-3 text-xs text-muted">
-              <span class="flex items-center gap-1.5 text-lilac font-medium">
-                <span class="h-2 w-2 rounded-full bg-[#8f529b] animate-pulse"></span> Digital Catalogue
+            <div class="mt-5 sm:mt-6 pt-3.5 sm:pt-4 border-t border-[var(--border-subtle)] flex items-center justify-between gap-3 text-xs text-muted">
+              <span class="flex items-center gap-1.5 text-lilac font-medium text-xs">
+                <span class="h-2 w-2 rounded-full bg-[#8f529b] animate-pulse"></span> Catalogue
               </span>
-              <div class="flex items-center gap-2">
-                <button 
-                  type="button" 
-                  class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-[#8f529b]/40 bg-[#8f529b]/15 hover:bg-[#8f529b] text-heading hover:text-white text-xs font-medium transition-all cursor-pointer shadow-sm"
-                  data-preview-img="assets/images/project_tala_by_kyla.png"
-                  data-preview-caption="Tala by Kyla — Online Jewelry Catalogue"
-                >
-                  <span>🔍</span> View Preview
-                </button>
-                <span>TBK Catalogue</span>
-              </div>
+              <button 
+                type="button" 
+                class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-[#8f529b]/40 bg-[#8f529b]/15 hover:bg-[#8f529b] text-heading hover:text-white text-xs font-medium transition-all cursor-pointer shadow-sm"
+                data-preview-img="assets/images/project_tala_by_kyla.png"
+                data-preview-caption="Tala by Kyla — Online Jewelry Catalogue"
+              >
+                <span>🔍</span> View Preview
+              </button>
             </div>
           </div>
 
-          <!-- Project Showcase Mockup (Col span 7) -->
-          <div class="md:col-span-7 min-w-0">
+          <!-- Project Showcase Mockup (order-1 on mobile, col-span-7 on desktop) -->
+          <div class="order-1 md:order-2 md:col-span-7 min-w-0">
             <div class="overflow-hidden rounded-2xl border border-[var(--border-subtle)] bg-[var(--bg-chrome)] shadow-2xl group/preview project-preview-trigger cursor-pointer" data-preview-img="assets/images/project_tala_by_kyla.png" data-preview-caption="Tala by Kyla — Online Jewelry Catalogue">
               <!-- Window Chrome Bar -->
               <div class="flex items-center justify-between px-4 py-2.5 border-b border-[var(--border-subtle)] bg-[var(--bg-surface)]">
@@ -375,30 +416,31 @@
         <!-- ===================================================================
              PROJECT 02: FRUIT NINJA INTERACTIVE WEB GAME
              =================================================================== -->
-        <li class="project-card group relative grid md:grid-cols-12 gap-6 md:gap-8 p-6 sm:p-8 rounded-3xl border border-[var(--border-subtle)] bg-[var(--bg-card)] backdrop-blur-2xl hover:border-[var(--lilac-primary)] hover:shadow-2xl transition-all duration-300">
+        <li class="project-card group relative grid md:grid-cols-12 gap-5 md:gap-8 p-4 sm:p-6 md:p-8 rounded-2xl sm:rounded-3xl border border-[var(--border-subtle)] bg-[var(--bg-card)] backdrop-blur-2xl hover:border-[var(--lilac-primary)] hover:shadow-2xl transition-all duration-300">
           
-          <!-- Number indicator -->
-          <div class="md:col-span-1 text-sm text-lilac font-mono font-bold">
-            02
+          <!-- Number indicator & mobile category pill -->
+          <div class="md:col-span-1 flex items-center justify-between md:block text-sm text-lilac font-mono font-bold">
+            <span>02</span>
+            <span class="md:hidden text-[10px] font-sans px-2.5 py-0.5 rounded-full border border-[#8f529b]/35 bg-[var(--lilac-primary)]/10 text-lilac uppercase tracking-wider font-semibold">HTML5 Game</span>
           </div>
 
-          <!-- Project Details (Col span 4) -->
-          <div class="md:col-span-4 min-w-0 flex flex-col justify-between">
+          <!-- Project Details (order-2 on mobile, col-span-4 on desktop) -->
+          <div class="order-2 md:order-1 md:col-span-4 min-w-0 flex flex-col justify-between">
             <div>
-              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#8f529b]/35 bg-[var(--lilac-primary)]/10 text-[11px] font-semibold text-lilac uppercase tracking-widest mb-3">
+              <div class="hidden md:inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#8f529b]/35 bg-[var(--lilac-primary)]/10 text-[11px] font-semibold text-lilac uppercase tracking-widest mb-3">
                 <span>🎮</span> HTML5 Canvas Game
               </div>
 
-              <h3 class="font-display text-2xl sm:text-3xl tracking-tight text-heading group-hover:text-lilac transition-colors">
+              <h3 class="font-display text-xl sm:text-2xl md:text-3xl tracking-tight text-heading group-hover:text-lilac transition-colors">
                 Fruit Ninja — Interactive Web Game
               </h3>
               
-              <p class="mt-3 text-sm sm:text-base text-body leading-relaxed">
+              <p class="mt-2.5 sm:mt-3 text-xs sm:text-base text-body leading-relaxed">
                 An interactive browser game built with HTML5 Canvas and JavaScript inspired by Fruit Ninja. Features responsive slicing controls, Arcade, Classic, and Zen play modes, blade slice effects, and score tracking.
               </p>
 
               <!-- Architecture Highlights -->
-              <div class="mt-5 space-y-2 text-xs text-body">
+              <div class="mt-4 sm:mt-5 space-y-1.5 sm:space-y-2 text-xs text-body">
                 <div class="flex items-center gap-2">
                   <span class="text-lilac font-bold">✓</span> Interactive fruit slicing with mouse and touch support
                 </div>
@@ -411,34 +453,31 @@
               </div>
 
               <!-- Tech Stack Badges -->
-              <div class="mt-6 flex flex-wrap gap-2">
-                <span class="text-[11px] sm:text-xs px-3 py-1 rounded-full border border-[var(--border-subtle)] bg-[var(--bg-deep)] text-body">HTML5 Canvas</span>
-                <span class="text-[11px] sm:text-xs px-3 py-1 rounded-full border border-[var(--border-subtle)] bg-[var(--bg-deep)] text-body">JavaScript</span>
-                <span class="text-[11px] sm:text-xs px-3 py-1 rounded-full border border-[var(--border-subtle)] bg-[var(--bg-deep)] text-body">Game Loop</span>
-                <span class="text-[11px] sm:text-xs px-3 py-1 rounded-full border border-[var(--border-subtle)] bg-[var(--bg-deep)] text-body">Audio FX</span>
+              <div class="mt-4 sm:mt-6 flex flex-wrap gap-1.5 sm:gap-2">
+                <span class="text-[10px] sm:text-xs px-2.5 sm:px-3 py-1 rounded-full border border-[var(--border-subtle)] bg-[var(--bg-deep)] text-body">HTML5 Canvas</span>
+                <span class="text-[10px] sm:text-xs px-2.5 sm:px-3 py-1 rounded-full border border-[var(--border-subtle)] bg-[var(--bg-deep)] text-body">JavaScript</span>
+                <span class="text-[10px] sm:text-xs px-2.5 sm:px-3 py-1 rounded-full border border-[var(--border-subtle)] bg-[var(--bg-deep)] text-body">Game Loop</span>
+                <span class="text-[10px] sm:text-xs px-2.5 sm:px-3 py-1 rounded-full border border-[var(--border-subtle)] bg-[var(--bg-deep)] text-body">Audio FX</span>
               </div>
             </div>
 
-            <div class="mt-6 pt-4 border-t border-[var(--border-subtle)] flex flex-wrap items-center justify-between gap-3 text-xs text-muted">
-              <span class="flex items-center gap-1.5 text-lilac font-medium">
-                <span class="h-2 w-2 rounded-full bg-[#8f529b] animate-pulse"></span> Canvas Web Game
+            <div class="mt-5 sm:mt-6 pt-3.5 sm:pt-4 border-t border-[var(--border-subtle)] flex items-center justify-between gap-3 text-xs text-muted">
+              <span class="flex items-center gap-1.5 text-lilac font-medium text-xs">
+                <span class="h-2 w-2 rounded-full bg-[#8f529b] animate-pulse"></span> Canvas Game
               </span>
-              <div class="flex items-center gap-2">
-                <button 
-                  type="button" 
-                  class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-[#8f529b]/40 bg-[#8f529b]/15 hover:bg-[#8f529b] text-heading hover:text-white text-xs font-medium transition-all cursor-pointer shadow-sm"
-                  data-preview-img="assets/images/project_fruit_ninja.png"
-                  data-preview-caption="Fruit Ninja — Interactive Web Game"
-                >
-                  <span>🔍</span> View Preview
-                </button>
-                <span>Playable Game</span>
-              </div>
+              <button 
+                type="button" 
+                class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-[#8f529b]/40 bg-[#8f529b]/15 hover:bg-[#8f529b] text-heading hover:text-white text-xs font-medium transition-all cursor-pointer shadow-sm"
+                data-preview-img="assets/images/project_fruit_ninja.png"
+                data-preview-caption="Fruit Ninja — Interactive Web Game"
+              >
+                <span>🔍</span> View Preview
+              </button>
             </div>
           </div>
 
-          <!-- Project Showcase Mockup (Col span 7) -->
-          <div class="md:col-span-7 min-w-0">
+          <!-- Project Showcase Mockup (order-1 on mobile, col-span-7 on desktop) -->
+          <div class="order-1 md:order-2 md:col-span-7 min-w-0">
             <div class="overflow-hidden rounded-2xl border border-[var(--border-subtle)] bg-[var(--bg-chrome)] shadow-2xl group/preview project-preview-trigger cursor-pointer" data-preview-img="assets/images/project_fruit_ninja.png" data-preview-caption="Fruit Ninja — Interactive Web Game">
               <!-- Window Chrome Bar -->
               <div class="flex items-center justify-between px-4 py-2.5 border-b border-[var(--border-subtle)] bg-[var(--bg-surface)]">
@@ -482,30 +521,31 @@
         <!-- ===================================================================
              PROJECT 03: CAFETERIA PRE-ORDER MOBILE WEB APP
              =================================================================== -->
-        <li class="project-card group relative grid md:grid-cols-12 gap-6 md:gap-8 p-6 sm:p-8 rounded-3xl border border-[var(--border-subtle)] bg-[var(--bg-card)] backdrop-blur-2xl hover:border-[var(--lilac-primary)] hover:shadow-2xl transition-all duration-300">
+        <li class="project-card group relative grid md:grid-cols-12 gap-5 md:gap-8 p-4 sm:p-6 md:p-8 rounded-2xl sm:rounded-3xl border border-[var(--border-subtle)] bg-[var(--bg-card)] backdrop-blur-2xl hover:border-[var(--lilac-primary)] hover:shadow-2xl transition-all duration-300">
           
-          <!-- Number indicator -->
-          <div class="md:col-span-1 text-sm text-lilac font-mono font-bold">
-            03
+          <!-- Number indicator & mobile category pill -->
+          <div class="md:col-span-1 flex items-center justify-between md:block text-sm text-lilac font-mono font-bold">
+            <span>03</span>
+            <span class="md:hidden text-[10px] font-sans px-2.5 py-0.5 rounded-full border border-[#8f529b]/35 bg-[var(--lilac-primary)]/10 text-lilac uppercase tracking-wider font-semibold">Mobile App</span>
           </div>
 
-          <!-- Project Details (Col span 4) -->
-          <div class="md:col-span-4 min-w-0 flex flex-col justify-between">
+          <!-- Project Details (order-2 on mobile, col-span-4 on desktop) -->
+          <div class="order-2 md:order-1 md:col-span-4 min-w-0 flex flex-col justify-between">
             <div>
-              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#8f529b]/35 bg-[var(--lilac-primary)]/10 text-[11px] font-semibold text-lilac uppercase tracking-widest mb-3">
+              <div class="hidden md:inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#8f529b]/35 bg-[var(--lilac-primary)]/10 text-[11px] font-semibold text-lilac uppercase tracking-widest mb-3">
                 <span>🍔</span> Canteen Ordering App
               </div>
 
-              <h3 class="font-display text-2xl sm:text-3xl tracking-tight text-heading group-hover:text-lilac transition-colors">
+              <h3 class="font-display text-xl sm:text-2xl md:text-3xl tracking-tight text-heading group-hover:text-lilac transition-colors">
                 Canteen Food Ordering App
               </h3>
               
-              <p class="mt-3 text-sm sm:text-base text-body leading-relaxed">
+              <p class="mt-2.5 sm:mt-3 text-xs sm:text-base text-body leading-relaxed">
                 A mobile-friendly food ordering web application created for the school canteen. It allows students to easily browse available meals, snacks, and beverages, add items to their cart, and prepare their food orders to avoid long canteen lines.
               </p>
 
               <!-- Architecture Highlights -->
-              <div class="mt-5 space-y-2 text-xs text-body">
+              <div class="mt-4 sm:mt-5 space-y-1.5 sm:space-y-2 text-xs text-body">
                 <div class="flex items-center gap-2">
                   <span class="text-lilac font-bold">✓</span> Category menu browsing: Rice meals, snacks, and drinks
                 </div>
@@ -518,34 +558,31 @@
               </div>
 
               <!-- Tech Stack Badges -->
-              <div class="mt-6 flex flex-wrap gap-2">
-                <span class="text-[11px] sm:text-xs px-3 py-1 rounded-full border border-[var(--border-subtle)] bg-[var(--bg-deep)] text-body">HTML5</span>
-                <span class="text-[11px] sm:text-xs px-3 py-1 rounded-full border border-[var(--border-subtle)] bg-[var(--bg-deep)] text-body">CSS3 / Flexbox</span>
-                <span class="text-[11px] sm:text-xs px-3 py-1 rounded-full border border-[var(--border-subtle)] bg-[var(--bg-deep)] text-body">JavaScript</span>
-                <span class="text-[11px] sm:text-xs px-3 py-1 rounded-full border border-[var(--border-subtle)] bg-[var(--bg-deep)] text-body">Mobile UI</span>
+              <div class="mt-4 sm:mt-6 flex flex-wrap gap-1.5 sm:gap-2">
+                <span class="text-[10px] sm:text-xs px-2.5 sm:px-3 py-1 rounded-full border border-[var(--border-subtle)] bg-[var(--bg-deep)] text-body">HTML5</span>
+                <span class="text-[10px] sm:text-xs px-2.5 sm:px-3 py-1 rounded-full border border-[var(--border-subtle)] bg-[var(--bg-deep)] text-body">CSS3</span>
+                <span class="text-[10px] sm:text-xs px-2.5 sm:px-3 py-1 rounded-full border border-[var(--border-subtle)] bg-[var(--bg-deep)] text-body">JavaScript</span>
+                <span class="text-[10px] sm:text-xs px-2.5 sm:px-3 py-1 rounded-full border border-[var(--border-subtle)] bg-[var(--bg-deep)] text-body">Mobile UI</span>
               </div>
             </div>
 
-            <div class="mt-6 pt-4 border-t border-[var(--border-subtle)] flex flex-wrap items-center justify-between gap-3 text-xs text-muted">
-              <span class="flex items-center gap-1.5 text-lilac font-medium">
-                <span class="h-2 w-2 rounded-full bg-[#8f529b] animate-pulse"></span> Canteen Food App
+            <div class="mt-5 sm:mt-6 pt-3.5 sm:pt-4 border-t border-[var(--border-subtle)] flex items-center justify-between gap-3 text-xs text-muted">
+              <span class="flex items-center gap-1.5 text-lilac font-medium text-xs">
+                <span class="h-2 w-2 rounded-full bg-[#8f529b] animate-pulse"></span> Ordering App
               </span>
-              <div class="flex items-center gap-2">
-                <button 
-                  type="button" 
-                  class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-[#8f529b]/40 bg-[#8f529b]/15 hover:bg-[#8f529b] text-heading hover:text-white text-xs font-medium transition-all cursor-pointer shadow-sm"
-                  data-preview-img="assets/images/project_cafeteria_preorder.png"
-                  data-preview-caption="Canteen Food Ordering App"
-                >
-                  <span>🔍</span> View Preview
-                </button>
-                <span>Mobile App</span>
-              </div>
+              <button 
+                type="button" 
+                class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-[#8f529b]/40 bg-[#8f529b]/15 hover:bg-[#8f529b] text-heading hover:text-white text-xs font-medium transition-all cursor-pointer shadow-sm"
+                data-preview-img="assets/images/project_cafeteria_preorder.png"
+                data-preview-caption="Canteen Food Ordering App"
+              >
+                <span>🔍</span> View Preview
+              </button>
             </div>
           </div>
 
-          <!-- Project Showcase Mockup (Col span 7) -->
-          <div class="md:col-span-7 min-w-0">
+          <!-- Project Showcase Mockup (order-1 on mobile, col-span-7 on desktop) -->
+          <div class="order-1 md:order-2 md:col-span-7 min-w-0">
             <div class="overflow-hidden rounded-2xl border border-[var(--border-subtle)] bg-[var(--bg-chrome)] shadow-2xl group/preview project-preview-trigger cursor-pointer" data-preview-img="assets/images/project_cafeteria_preorder.png" data-preview-caption="Canteen Food Ordering App">
               <!-- Window Chrome Bar -->
               <div class="flex items-center justify-between px-4 py-2.5 border-b border-[var(--border-subtle)] bg-[var(--bg-surface)]">
@@ -592,30 +629,31 @@
         <!-- ===================================================================
              PROJECT 04: SIERRA MADRE EXPLORER ECO-TOURISM PORTAL
              =================================================================== -->
-        <li class="project-card group relative grid md:grid-cols-12 gap-6 md:gap-8 p-6 sm:p-8 rounded-3xl border border-[var(--border-subtle)] bg-[var(--bg-card)] backdrop-blur-2xl hover:border-[var(--lilac-primary)] hover:shadow-2xl transition-all duration-300">
+        <li class="project-card group relative grid md:grid-cols-12 gap-5 md:gap-8 p-4 sm:p-6 md:p-8 rounded-2xl sm:rounded-3xl border border-[var(--border-subtle)] bg-[var(--bg-card)] backdrop-blur-2xl hover:border-[var(--lilac-primary)] hover:shadow-2xl transition-all duration-300">
           
-          <!-- Number indicator -->
-          <div class="md:col-span-1 text-sm text-lilac font-mono font-bold">
-            04
+          <!-- Number indicator & mobile category pill -->
+          <div class="md:col-span-1 flex items-center justify-between md:block text-sm text-lilac font-mono font-bold">
+            <span>04</span>
+            <span class="md:hidden text-[10px] font-sans px-2.5 py-0.5 rounded-full border border-[#8f529b]/35 bg-[var(--lilac-primary)]/10 text-lilac uppercase tracking-wider font-semibold">Web Portal</span>
           </div>
 
-          <!-- Project Details (Col span 4) -->
-          <div class="md:col-span-4 min-w-0 flex flex-col justify-between">
+          <!-- Project Details (order-2 on mobile, col-span-4 on desktop) -->
+          <div class="order-2 md:order-1 md:col-span-4 min-w-0 flex flex-col justify-between">
             <div>
-              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#8f529b]/35 bg-[var(--lilac-primary)]/10 text-[11px] font-semibold text-lilac uppercase tracking-widest mb-3">
+              <div class="hidden md:inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#8f529b]/35 bg-[var(--lilac-primary)]/10 text-[11px] font-semibold text-lilac uppercase tracking-widest mb-3">
                 <span>🏔️</span> Nueva Ecija Tourism Guide
               </div>
 
-              <h3 class="font-display text-2xl sm:text-3xl tracking-tight text-heading group-hover:text-lilac transition-colors">
+              <h3 class="font-display text-xl sm:text-2xl md:text-3xl tracking-tight text-heading group-hover:text-lilac transition-colors">
                 Sierra Madre Explorer — Nueva Ecija Tourist Spots
               </h3>
               
-              <p class="mt-3 text-sm sm:text-base text-body leading-relaxed">
+              <p class="mt-2.5 sm:mt-3 text-xs sm:text-base text-body leading-relaxed">
                 A travel and tourism website showcasing popular tourist spots, mountain viewpoints, resorts, and waterfalls across Nueva Ecija and the Sierra Madre region. Designed with destination cards, photo showcases, and travel information to guide tourists and local visitors.
               </p>
 
               <!-- Architecture Highlights -->
-              <div class="mt-5 space-y-2 text-xs text-body">
+              <div class="mt-4 sm:mt-5 space-y-1.5 sm:space-y-2 text-xs text-body">
                 <div class="flex items-center gap-2">
                   <span class="text-lilac font-bold">✓</span> Features tourist destinations, resorts, and falls in Nueva Ecija
                 </div>
@@ -628,34 +666,31 @@
               </div>
 
               <!-- Tech Stack Badges -->
-              <div class="mt-6 flex flex-wrap gap-2">
-                <span class="text-[11px] sm:text-xs px-3 py-1 rounded-full border border-[var(--border-subtle)] bg-[var(--bg-deep)] text-body">HTML5</span>
-                <span class="text-[11px] sm:text-xs px-3 py-1 rounded-full border border-[var(--border-subtle)] bg-[var(--bg-deep)] text-body">CSS3 / Grid &amp; Flexbox</span>
-                <span class="text-[11px] sm:text-xs px-3 py-1 rounded-full border border-[var(--border-subtle)] bg-[var(--bg-deep)] text-body">JavaScript</span>
-                <span class="text-[11px] sm:text-xs px-3 py-1 rounded-full border border-[var(--border-subtle)] bg-[var(--bg-deep)] text-body">Responsive Design</span>
+              <div class="mt-4 sm:mt-6 flex flex-wrap gap-1.5 sm:gap-2">
+                <span class="text-[10px] sm:text-xs px-2.5 sm:px-3 py-1 rounded-full border border-[var(--border-subtle)] bg-[var(--bg-deep)] text-body">HTML5</span>
+                <span class="text-[10px] sm:text-xs px-2.5 sm:px-3 py-1 rounded-full border border-[var(--border-subtle)] bg-[var(--bg-deep)] text-body">CSS3</span>
+                <span class="text-[10px] sm:text-xs px-2.5 sm:px-3 py-1 rounded-full border border-[var(--border-subtle)] bg-[var(--bg-deep)] text-body">JavaScript</span>
+                <span class="text-[10px] sm:text-xs px-2.5 sm:px-3 py-1 rounded-full border border-[var(--border-subtle)] bg-[var(--bg-deep)] text-body">Responsive UI</span>
               </div>
             </div>
 
-            <div class="mt-6 pt-4 border-t border-[var(--border-subtle)] flex flex-wrap items-center justify-between gap-3 text-xs text-muted">
-              <span class="flex items-center gap-1.5 text-lilac font-medium">
-                <span class="h-2 w-2 rounded-full bg-[#8f529b] animate-pulse"></span> Nueva Ecija Tourism
+            <div class="mt-5 sm:mt-6 pt-3.5 sm:pt-4 border-t border-[var(--border-subtle)] flex items-center justify-between gap-3 text-xs text-muted">
+              <span class="flex items-center gap-1.5 text-lilac font-medium text-xs">
+                <span class="h-2 w-2 rounded-full bg-[#8f529b] animate-pulse"></span> Tourism Guide
               </span>
-              <div class="flex items-center gap-2">
-                <button 
-                  type="button" 
-                  class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-[#8f529b]/40 bg-[#8f529b]/15 hover:bg-[#8f529b] text-heading hover:text-white text-xs font-medium transition-all cursor-pointer shadow-sm"
-                  data-preview-img="assets/images/project_sierra_madre.png"
-                  data-preview-caption="Sierra Madre Explorer — Nueva Ecija Tourist Spots"
-                >
-                  <span>🔍</span> View Preview
-                </button>
-                <span>Web Portal</span>
-              </div>
+              <button 
+                type="button" 
+                class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-[#8f529b]/40 bg-[#8f529b]/15 hover:bg-[#8f529b] text-heading hover:text-white text-xs font-medium transition-all cursor-pointer shadow-sm"
+                data-preview-img="assets/images/project_sierra_madre.png"
+                data-preview-caption="Sierra Madre Explorer — Nueva Ecija Tourist Spots"
+              >
+                <span>🔍</span> View Preview
+              </button>
             </div>
           </div>
 
-          <!-- Project Showcase Mockup (Col span 7) -->
-          <div class="md:col-span-7 min-w-0">
+          <!-- Project Showcase Mockup (order-1 on mobile, col-span-7 on desktop) -->
+          <div class="order-1 md:order-2 md:col-span-7 min-w-0">
             <div class="overflow-hidden rounded-2xl border border-[var(--border-subtle)] bg-[var(--bg-chrome)] shadow-2xl group/preview project-preview-trigger cursor-pointer" data-preview-img="assets/images/project_sierra_madre.png" data-preview-caption="Sierra Madre Explorer — Nueva Ecija Tourist Spots">
               <!-- Window Chrome Bar -->
               <div class="flex items-center justify-between px-4 py-2.5 border-b border-[var(--border-subtle)] bg-[var(--bg-surface)]">
@@ -830,21 +865,21 @@
         </p>
       </div>
 
-      <!-- Category Filter Pills -->
-      <div class="flex flex-wrap items-center gap-2 sm:gap-3 mb-10">
-        <button data-filter="all" class="cert-filter-btn px-4 py-1.5 rounded-full text-xs sm:text-sm font-medium border border-[#8f529b] bg-[#8f529b] text-white shadow-md transition-all cursor-pointer">
+      <!-- Category Filter Pills (Smooth swipeable on mobile) -->
+      <div class="flex items-center gap-2 sm:gap-3 overflow-x-auto no-scrollbar pb-2 -mx-4 px-4 sm:mx-0 sm:px-0 sm:flex-wrap mb-8 sm:mb-10">
+        <button data-filter="all" class="cert-filter-btn shrink-0 whitespace-nowrap px-4 py-2 sm:py-1.5 rounded-full text-xs sm:text-sm font-medium border border-[#8f529b] bg-[#8f529b] text-white shadow-md transition-all cursor-pointer">
           All Credentials (5)
         </button>
-        <button data-filter="ai" class="cert-filter-btn px-4 py-1.5 rounded-full text-xs sm:text-sm font-medium border border-[var(--border-subtle)] text-muted hover:border-[var(--lilac-primary)] hover:text-heading transition-all cursor-pointer">
+        <button data-filter="ai" class="cert-filter-btn shrink-0 whitespace-nowrap px-4 py-2 sm:py-1.5 rounded-full text-xs sm:text-sm font-medium border border-[var(--border-subtle)] text-muted hover:border-[var(--lilac-primary)] hover:text-heading transition-all cursor-pointer">
           AI &amp; Analytics
         </button>
-        <button data-filter="gamedev" class="cert-filter-btn px-4 py-1.5 rounded-full text-xs sm:text-sm font-medium border border-[var(--border-subtle)] text-muted hover:border-[var(--lilac-primary)] hover:text-heading transition-all cursor-pointer">
+        <button data-filter="gamedev" class="cert-filter-btn shrink-0 whitespace-nowrap px-4 py-2 sm:py-1.5 rounded-full text-xs sm:text-sm font-medium border border-[var(--border-subtle)] text-muted hover:border-[var(--lilac-primary)] hover:text-heading transition-all cursor-pointer">
           Game Development
         </button>
-        <button data-filter="networking" class="cert-filter-btn px-4 py-1.5 rounded-full text-xs sm:text-sm font-medium border border-[var(--border-subtle)] text-muted hover:border-[var(--lilac-primary)] hover:text-heading transition-all cursor-pointer">
+        <button data-filter="networking" class="cert-filter-btn shrink-0 whitespace-nowrap px-4 py-2 sm:py-1.5 rounded-full text-xs sm:text-sm font-medium border border-[var(--border-subtle)] text-muted hover:border-[var(--lilac-primary)] hover:text-heading transition-all cursor-pointer">
           Networking &amp; CCNA
         </button>
-        <button data-filter="productivity" class="cert-filter-btn px-4 py-1.5 rounded-full text-xs sm:text-sm font-medium border border-[var(--border-subtle)] text-muted hover:border-[var(--lilac-primary)] hover:text-heading transition-all cursor-pointer">
+        <button data-filter="productivity" class="cert-filter-btn shrink-0 whitespace-nowrap px-4 py-2 sm:py-1.5 rounded-full text-xs sm:text-sm font-medium border border-[var(--border-subtle)] text-muted hover:border-[var(--lilac-primary)] hover:text-heading transition-all cursor-pointer">
           Productivity &amp; Career
         </button>
       </div>
@@ -1173,40 +1208,40 @@
         </div>
 
         <!-- Social Media Channels (Facebook, Instagram, TikTok) -->
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
+        <div class="grid grid-cols-3 gap-2.5 sm:gap-6">
           <!-- Facebook -->
-          <div class="p-5 rounded-2xl border border-[var(--border-subtle)] bg-[var(--bg-card)] hover:border-[var(--lilac-primary)] hover:shadow-xl transition-all">
-            <div class="flex items-center justify-between mb-2">
-              <p class="text-[11px] uppercase tracking-widest text-muted font-semibold">Facebook Profile</p>
-              <span class="text-xs text-lilac">📘</span>
+          <div class="p-3 sm:p-5 rounded-2xl border border-[var(--border-subtle)] bg-[var(--bg-card)] hover:border-[var(--lilac-primary)] hover:shadow-xl transition-all text-center sm:text-left">
+            <div class="flex items-center justify-center sm:justify-between mb-1 sm:mb-2">
+              <span class="text-base sm:text-xs text-lilac">📘</span>
+              <p class="hidden sm:block text-[11px] uppercase tracking-widest text-muted font-semibold">Facebook</p>
             </div>
-            <a href="https://www.facebook.com/sarahcabuhat" target="_blank" rel="noreferrer" class="text-base font-semibold text-heading hover:text-lilac transition-colors inline-flex items-center gap-1.5">
-              Sarah Cabuhat
-              <span aria-hidden="true">↗</span>
+            <a href="https://www.facebook.com/sarahcabuhat" target="_blank" rel="noreferrer" class="text-xs sm:text-base font-semibold text-heading hover:text-lilac transition-colors inline-flex items-center gap-1">
+              <span>Sarah</span>
+              <span aria-hidden="true" class="text-[9px]">↗</span>
             </a>
           </div>
 
           <!-- Instagram -->
-          <div class="p-5 rounded-2xl border border-[var(--border-subtle)] bg-[var(--bg-card)] hover:border-[var(--lilac-primary)] hover:shadow-xl transition-all">
-            <div class="flex items-center justify-between mb-2">
-              <p class="text-[11px] uppercase tracking-widest text-muted font-semibold">Instagram</p>
-              <span class="text-xs text-lilac">📷</span>
+          <div class="p-3 sm:p-5 rounded-2xl border border-[var(--border-subtle)] bg-[var(--bg-card)] hover:border-[var(--lilac-primary)] hover:shadow-xl transition-all text-center sm:text-left">
+            <div class="flex items-center justify-center sm:justify-between mb-1 sm:mb-2">
+              <span class="text-base sm:text-xs text-lilac">📷</span>
+              <p class="hidden sm:block text-[11px] uppercase tracking-widest text-muted font-semibold">Instagram</p>
             </div>
-            <a href="https://www.instagram.com/_srhcbht/" target="_blank" rel="noreferrer" class="text-base font-semibold text-heading hover:text-lilac transition-colors inline-flex items-center gap-1.5">
-              _srhcbht
-              <span aria-hidden="true">↗</span>
+            <a href="https://www.instagram.com/_srhcbht/" target="_blank" rel="noreferrer" class="text-xs sm:text-base font-semibold text-heading hover:text-lilac transition-colors inline-flex items-center gap-1">
+              <span>_srhcbht</span>
+              <span aria-hidden="true" class="text-[9px]">↗</span>
             </a>
           </div>
 
           <!-- TikTok -->
-          <div class="p-5 rounded-2xl border border-[var(--border-subtle)] bg-[var(--bg-card)] hover:border-[var(--lilac-primary)] hover:shadow-xl transition-all">
-            <div class="flex items-center justify-between mb-2">
-              <p class="text-[11px] uppercase tracking-widest text-muted font-semibold">TikTok</p>
-              <span class="text-xs text-lilac">🎵</span>
+          <div class="p-3 sm:p-5 rounded-2xl border border-[var(--border-subtle)] bg-[var(--bg-card)] hover:border-[var(--lilac-primary)] hover:shadow-xl transition-all text-center sm:text-left">
+            <div class="flex items-center justify-center sm:justify-between mb-1 sm:mb-2">
+              <span class="text-base sm:text-xs text-lilac">🎵</span>
+              <p class="hidden sm:block text-[11px] uppercase tracking-widest text-muted font-semibold">TikTok</p>
             </div>
-            <a href="https://www.tiktok.com/@_itzsaraqrl" target="_blank" rel="noreferrer" class="text-base font-semibold text-heading hover:text-lilac transition-colors inline-flex items-center gap-1.5">
-              _itzsaraqrl
-              <span aria-hidden="true">↗</span>
+            <a href="https://www.tiktok.com/@_itzsaraqrl" target="_blank" rel="noreferrer" class="text-xs sm:text-base font-semibold text-heading hover:text-lilac transition-colors inline-flex items-center gap-1">
+              <span>_itzsaraqrl</span>
+              <span aria-hidden="true" class="text-[9px]">↗</span>
             </a>
           </div>
         </div>

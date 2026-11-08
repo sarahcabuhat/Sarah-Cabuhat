@@ -467,28 +467,44 @@ html.light .pointer-events-none.fixed.inset-0.-z-10 > div:not(.bg-grid-ambient) 
    MOBILE RESPONSIVENESS ENHANCEMENTS
    ========================================================================== */
 
-/* Improve project card layout on mobile */
+/* Utility: Hide scrollbar for mobile swipe chips */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 @media (max-width: 640px) {
-  .project-card {
-    padding: 1.25rem !important;
-  }
-
-  /* Reduce excessive spacing on mobile sections */
+  /* Cleaner section spacing on phones */
   section {
-    padding-top: 3rem !important;
-    padding-bottom: 3rem !important;
+    padding-top: 3.5rem !important;
+    padding-bottom: 3.5rem !important;
   }
 
-  /* Better font sizes on mobile */
+  /* Compact padding on cards for phones */
+  .project-card {
+    padding: 1.1rem !important;
+    border-radius: 1.5rem !important;
+  }
+
+  /* Headline scaling for phones */
   h1 {
-    word-break: break-word;
+    font-size: 2.6rem !important;
+    line-height: 1.05 !important;
+  }
+
+  h2 {
+    font-size: 1.85rem !important;
+    line-height: 1.15 !important;
   }
 }
 
 /* Smooth tap targets on mobile */
 @media (max-width: 768px) {
   a, button {
-    -webkit-tap-highlight-color: rgba(119, 17, 204, 0.2);
+    -webkit-tap-highlight-color: rgba(143, 82, 155, 0.2);
     touch-action: manipulation;
   }
 
@@ -496,7 +512,17 @@ html.light .pointer-events-none.fixed.inset-0.-z-10 > div:not(.bg-grid-ambient) 
   .mobile-nav-link {
     padding-top: 0.75rem !important;
     padding-bottom: 0.75rem !important;
-    font-size: 1rem;
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+    border-radius: 0.75rem;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .mobile-nav-link:active {
+    background: rgba(143, 82, 155, 0.15);
   }
 
   /* Cards get cleaner shadows on mobile */
