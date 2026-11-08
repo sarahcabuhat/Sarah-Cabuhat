@@ -145,8 +145,8 @@
           </p>
 
           <!-- Primary Action Buttons -->
-          <div class="mt-8 sm:mt-10 space-y-3">
-            <!-- Row 1: Main CTAs -->
+          <div class="mt-8 sm:mt-10">
+            <!-- Main CTAs -->
             <div class="flex flex-wrap items-center gap-3">
               <a href="#work" class="inline-flex items-center gap-2 rounded-full btn-dusty-lilac px-6 py-3 text-sm font-semibold flex-1 sm:flex-none justify-center sm:justify-start shadow-md">
                 View selected work
@@ -159,25 +159,6 @@
                 <span>📜</span> View Certificates
               </a>
             </div>
-            <!-- Row 2: Social Links -->
-            <div class="flex flex-wrap items-center gap-2.5">
-              <a href="https://www.facebook.com/sarahcabuhat" target="_blank" rel="noreferrer" class="inline-flex items-center gap-1.5 rounded-full border border-[var(--border-subtle)] bg-[var(--bg-card)] text-body px-4 py-2 text-xs sm:text-sm font-medium hover:border-[var(--lilac-primary)] hover:text-heading transition-all" title="Facebook Profile">
-                <span>📘</span> Facebook <span aria-hidden="true" class="text-[10px]">↗</span>
-              </a>
-              <a href="https://www.instagram.com/_srhcbht/" target="_blank" rel="noreferrer" class="inline-flex items-center gap-1.5 rounded-full border border-[var(--border-subtle)] bg-[var(--bg-card)] text-body px-4 py-2 text-xs sm:text-sm font-medium hover:border-[var(--lilac-primary)] hover:text-heading transition-all" title="Instagram Profile">
-                <span>📸</span> Instagram <span aria-hidden="true" class="text-[10px]">↗</span>
-              </a>
-              <a href="https://www.tiktok.com/@_itzsaraqrl" target="_blank" rel="noreferrer" class="inline-flex items-center gap-1.5 rounded-full border border-[var(--border-subtle)] bg-[var(--bg-card)] text-body px-4 py-2 text-xs sm:text-sm font-medium hover:border-[var(--lilac-primary)] hover:text-heading transition-all" title="TikTok Profile">
-                <span>🎵</span> TikTok <span aria-hidden="true" class="text-[10px]">↗</span>
-              </a>
-            </div>
-          </div>
-
-          <!-- Location Badge -->
-          <div class="mt-10 sm:mt-12 flex flex-wrap items-center gap-2.5 sm:gap-3 text-xs text-muted">
-            <span class="inline-flex items-center gap-1.5 rounded-full border border-[var(--border-subtle)] bg-[var(--bg-card)] px-3.5 py-1.5 text-body">
-              <span>📍</span> Bongabon, Nueva Ecija, PH
-            </span>
           </div>
         </div>
 
@@ -1165,40 +1146,43 @@
         </div>
 
         <!-- Social Media Channels (Facebook, Instagram, TikTok) -->
-        <div class="grid grid-cols-3 gap-2.5 sm:gap-6">
-          <!-- Facebook -->
-          <div class="p-3 sm:p-5 rounded-2xl border border-[var(--border-subtle)] bg-[var(--bg-card)] hover:border-[var(--lilac-primary)] hover:shadow-xl transition-all text-center sm:text-left">
-            <div class="flex items-center justify-center sm:justify-between mb-1 sm:mb-2">
-              <span class="text-base sm:text-xs text-lilac">📘</span>
-              <p class="hidden sm:block text-[11px] uppercase tracking-widest text-muted font-semibold">Facebook</p>
-            </div>
-            <a href="https://www.facebook.com/sarahcabuhat" target="_blank" rel="noreferrer" class="text-xs sm:text-base font-semibold text-heading hover:text-lilac transition-colors inline-flex items-center gap-1">
-              <span>Sarah</span>
-              <span aria-hidden="true" class="text-[9px]">↗</span>
+        <div>
+          <p class="text-xs uppercase tracking-widest text-muted font-semibold mb-3">Connect on Social Media</p>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
+            <!-- Facebook Card -->
+            <a href="https://www.facebook.com/sarahcabuhat" target="_blank" rel="noopener noreferrer" class="group p-5 rounded-2xl border border-[var(--border-subtle)] bg-[var(--bg-card)] hover:border-[var(--lilac-primary)] hover:shadow-xl hover:scale-[1.02] transition-all duration-300 block cursor-pointer">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xl text-lilac">📘</span>
+                <span class="text-xs uppercase tracking-wider text-muted group-hover:text-lilac transition-colors font-semibold flex items-center gap-1">
+                  Facebook <span class="text-xs">↗</span>
+                </span>
+              </div>
+              <p class="text-base font-bold text-heading group-hover:text-lilac transition-colors">Sarah Cabuhat</p>
+              <p class="text-xs text-muted mt-0.5">facebook.com/sarahcabuhat</p>
             </a>
-          </div>
 
-          <!-- Instagram -->
-          <div class="p-3 sm:p-5 rounded-2xl border border-[var(--border-subtle)] bg-[var(--bg-card)] hover:border-[var(--lilac-primary)] hover:shadow-xl transition-all text-center sm:text-left">
-            <div class="flex items-center justify-center sm:justify-between mb-1 sm:mb-2">
-              <span class="text-base sm:text-xs text-lilac">📷</span>
-              <p class="hidden sm:block text-[11px] uppercase tracking-widest text-muted font-semibold">Instagram</p>
-            </div>
-            <a href="https://www.instagram.com/_srhcbht/" target="_blank" rel="noreferrer" class="text-xs sm:text-base font-semibold text-heading hover:text-lilac transition-colors inline-flex items-center gap-1">
-              <span>_srhcbht</span>
-              <span aria-hidden="true" class="text-[9px]">↗</span>
+            <!-- Instagram Card -->
+            <a href="https://www.instagram.com/_srhcbht/" target="_blank" rel="noopener noreferrer" class="group p-5 rounded-2xl border border-[var(--border-subtle)] bg-[var(--bg-card)] hover:border-[var(--lilac-primary)] hover:shadow-xl hover:scale-[1.02] transition-all duration-300 block cursor-pointer">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xl text-lilac">📸</span>
+                <span class="text-xs uppercase tracking-wider text-muted group-hover:text-lilac transition-colors font-semibold flex items-center gap-1">
+                  Instagram <span class="text-xs">↗</span>
+                </span>
+              </div>
+              <p class="text-base font-bold text-heading group-hover:text-lilac transition-colors">@_srhcbht</p>
+              <p class="text-xs text-muted mt-0.5">instagram.com/_srhcbht</p>
             </a>
-          </div>
 
-          <!-- TikTok -->
-          <div class="p-3 sm:p-5 rounded-2xl border border-[var(--border-subtle)] bg-[var(--bg-card)] hover:border-[var(--lilac-primary)] hover:shadow-xl transition-all text-center sm:text-left">
-            <div class="flex items-center justify-center sm:justify-between mb-1 sm:mb-2">
-              <span class="text-base sm:text-xs text-lilac">🎵</span>
-              <p class="hidden sm:block text-[11px] uppercase tracking-widest text-muted font-semibold">TikTok</p>
-            </div>
-            <a href="https://www.tiktok.com/@_itzsaraqrl" target="_blank" rel="noreferrer" class="text-xs sm:text-base font-semibold text-heading hover:text-lilac transition-colors inline-flex items-center gap-1">
-              <span>_itzsaraqrl</span>
-              <span aria-hidden="true" class="text-[9px]">↗</span>
+            <!-- TikTok Card -->
+            <a href="https://www.tiktok.com/@_itzsaraqrl" target="_blank" rel="noopener noreferrer" class="group p-5 rounded-2xl border border-[var(--border-subtle)] bg-[var(--bg-card)] hover:border-[var(--lilac-primary)] hover:shadow-xl hover:scale-[1.02] transition-all duration-300 block cursor-pointer">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xl text-lilac">🎵</span>
+                <span class="text-xs uppercase tracking-wider text-muted group-hover:text-lilac transition-colors font-semibold flex items-center gap-1">
+                  TikTok <span class="text-xs">↗</span>
+                </span>
+              </div>
+              <p class="text-base font-bold text-heading group-hover:text-lilac transition-colors">@_itzsaraqrl</p>
+              <p class="text-xs text-muted mt-0.5">tiktok.com/@_itzsaraqrl</p>
             </a>
           </div>
         </div>
@@ -1280,9 +1264,7 @@
         <p>© 2026 Sarah Cabuhat. All Rights Reserved.</p>
       </div>
       <div class="flex flex-wrap items-center gap-4 sm:gap-6">
-        <a href="https://www.facebook.com/sarahcabuhat" target="_blank" rel="noreferrer" class="hover:text-lilac transition-colors">Facebook</a>
-        <a href="https://www.instagram.com/_srhcbht/" target="_blank" rel="noreferrer" class="hover:text-lilac transition-colors">Instagram</a>
-        <a href="https://www.tiktok.com/@_itzsaraqrl" target="_blank" rel="noreferrer" class="hover:text-lilac transition-colors">TikTok</a>
+        <span class="text-xs italic text-body">"Creativity brought to life, one line of code at a time." ✨</span>
         <a href="#top" class="hover:text-heading transition-colors font-medium text-lilac" title="Back to top">
           Back to top ↑
         </a>
